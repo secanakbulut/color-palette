@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>color palette</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>color palette</h1>
+    </header>
+
+    <section class="picker">
+      <label class="pick-label">
+        <span>pick</span>
+        <input type="color" id="colorPicker" value="#3b82f6">
+      </label>
+      <label class="hex-label">
+        <span>hex</span>
+        <input type="text" id="hexInput" value="#3b82f6" maxlength="7" spellcheck="false">
+      </label>
+      <div class="base">
+        <div class="base-swatch" id="baseSwatch"></div>
+        <div class="base-info" id="baseInfo"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
