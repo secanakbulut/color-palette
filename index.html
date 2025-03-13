@@ -10,6 +10,7 @@
   <main class="wrap">
     <header>
       <h1>color palette</h1>
+      <p class="sub">pick a color, get the math-based palettes</p>
     </header>
 
     <section class="picker">
@@ -26,6 +27,28 @@
         <div class="base-info" id="baseInfo"></div>
       </div>
     </section>
+
+    <section class="palette" id="analogous">
+      <h2>analogous <span class="note">base, base &plusmn; 30&deg;</span></h2>
+      <div class="row" data-row="analogous"></div>
+    </section>
+
+    <section class="palette" id="complementary">
+      <h2>complementary <span class="note">base + 180&deg;</span></h2>
+      <div class="row" data-row="complementary"></div>
+    </section>
+
+    <section class="palette" id="triadic">
+      <h2>triadic <span class="note">base, +120&deg;, +240&deg;</span></h2>
+      <div class="row" data-row="triadic"></div>
+    </section>
+
+    <section class="palette" id="tetradic">
+      <h2>tetradic <span class="note">base, +90&deg;, +180&deg;, +270&deg;</span></h2>
+      <div class="row" data-row="tetradic"></div>
+    </section>
+
+    <p class="hint" id="hint">click any swatch to copy its hex</p>
   </main>
 
   <script src="app.js"></script>

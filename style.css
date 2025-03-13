@@ -18,8 +18,15 @@ html, body {
 
 header h1 {
   font-size: 28px;
-  margin: 0 0 20px;
+  margin: 0 0 4px;
   font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+header .sub {
+  margin: 0 0 28px;
+  color: #8b8d96;
+  font-size: 14px;
 }
 
 .picker {
@@ -31,6 +38,7 @@ header h1 {
   background: #161922;
   border: 1px solid #232733;
   border-radius: 10px;
+  margin-bottom: 28px;
 }
 
 .pick-label, .hex-label {
@@ -63,6 +71,10 @@ header h1 {
   outline: none;
 }
 
+.hex-label input[type="text"]:focus {
+  border-color: #3b82f6;
+}
+
 .base {
   display: flex;
   align-items: center;
@@ -82,4 +94,91 @@ header h1 {
   font-size: 12px;
   color: #b8bac3;
   line-height: 1.6;
+}
+
+.palette {
+  margin-bottom: 26px;
+}
+
+.palette h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: #d4d6dd;
+  text-transform: lowercase;
+}
+
+.palette h2 .note {
+  font-weight: 400;
+  color: #6b6e78;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.row {
+  display: grid;
+  gap: 10px;
+}
+
+.row[data-row="analogous"],
+.row[data-row="triadic"] { grid-template-columns: repeat(3, 1fr); }
+.row[data-row="complementary"] { grid-template-columns: repeat(2, 1fr); }
+.row[data-row="tetradic"] { grid-template-columns: repeat(4, 1fr); }
+
+.swatch {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #232733;
+  cursor: pointer;
+  background: #161922;
+  transition: transform 0.08s ease, border-color 0.15s ease;
+}
+
+.swatch:hover {
+  border-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.swatch:active { transform: translateY(0); }
+
+.swatch .color {
+  height: 90px;
+  width: 100%;
+}
+
+.swatch .meta {
+  padding: 10px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  color: #b8bac3;
+  line-height: 1.6;
+}
+
+.swatch .hex {
+  color: #e8e8ea;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.swatch.copied {
+  border-color: #4ade80;
+}
+
+.hint {
+  margin: 30px 0 0;
+  text-align: center;
+  font-size: 12px;
+  color: #6b6e78;
+  transition: color 0.15s ease;
+}
+
+.hint.flash { color: #4ade80; }
+
+@media (max-width: 600px) {
+  .picker {
+    grid-template-columns: 1fr 1fr;
+  }
+  .base { grid-column: 1 / -1; justify-self: start; }
+  .row[data-row="tetradic"] { grid-template-columns: repeat(2, 1fr); }
 }
