@@ -182,3 +182,8 @@ header .sub {
   .base { grid-column: 1 / -1; justify-self: start; }
   .row[data-row="tetradic"] { grid-template-columns: repeat(2, 1fr); }
 }
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
