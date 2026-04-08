@@ -1,5 +1,7 @@
 # color-palette
 
+![](docs/screenshot.png)
+
 small thing i made over a few evenings. pick a color and it spits out the usual palette types based on hue rotation math.
 
 what it does:
